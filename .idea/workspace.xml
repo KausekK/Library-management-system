@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="254addc8-e932-4aaa-b52c-36364c5a031c" name="Changes" comment="">
+    <list default="true" id="254addc8-e932-4aaa-b52c-36364c5a031c" name="Changes" comment="add, edit and remove books or readers, borrowing and returning books">
+      <change afterPath="$PROJECT_DIR$/Book.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Loan.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -75,12 +80,25 @@
       <option name="presentableId" value="Default" />
       <updated>1714247008404</updated>
       <workItem from="1714247008407" duration="235000" />
-      <workItem from="1714247258750" duration="4258000" />
+      <workItem from="1714247258750" duration="4572000" />
     </task>
+    <task id="LOCAL-00001" summary="add, edit and remove books or readers, borrowing and returning books">
+      <option name="closed" value="true" />
+      <created>1714251873324</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714251873324</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add, edit and remove books or readers, borrowing and returning books" />
+    <option name="LAST_COMMIT_MESSAGE" value="add, edit and remove books or readers, borrowing and returning books" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/LibraryManagmen_Python$Reader.coverage" NAME="Reader Coverage Results" MODIFIED="1714251174913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
