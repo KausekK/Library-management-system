@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="254addc8-e932-4aaa-b52c-36364c5a031c" name="Changes" comment="">
+    <list default="true" id="254addc8-e932-4aaa-b52c-36364c5a031c" name="Changes" comment="add history for reader, book reservation and some else">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Book.py" beforeDir="false" afterPath="$PROJECT_DIR$/Book.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Loan.py" beforeDir="false" afterPath="$PROJECT_DIR$/Loan.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
@@ -54,7 +53,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.Book.executor": "Run",
-    "Python.Library.executor": "Debug",
+    "Python.Library.executor": "Run",
     "Python.Main.executor": "Run",
     "Python.Reader.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -86,7 +85,7 @@
       <workItem from="1714247008407" duration="235000" />
       <workItem from="1714247258750" duration="5224000" />
       <workItem from="1714296023943" duration="7979000" />
-      <workItem from="1714304373425" duration="2903000" />
+      <workItem from="1714304373425" duration="10852000" />
     </task>
     <task id="LOCAL-00001" summary="add, edit and remove books or readers, borrowing and returning books">
       <option name="closed" value="true" />
@@ -104,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714251906113</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add history for reader, book reservation and some else">
+      <option name="closed" value="true" />
+      <created>1714307492825</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714307492825</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,12 +130,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add, edit and remove books or readers, borrowing and returning books" />
-    <option name="LAST_COMMIT_MESSAGE" value="add, edit and remove books or readers, borrowing and returning books" />
+    <MESSAGE value="add history for reader, book reservation and some else" />
+    <option name="LAST_COMMIT_MESSAGE" value="add history for reader, book reservation and some else" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Main.py</url>
+          <line>95</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/LibraryManagmen_Python$Library.coverage" NAME="Library Coverage Results" MODIFIED="1714305319530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LibraryManagmen_Python$Book.coverage" NAME="Book Coverage Results" MODIFIED="1714305713335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LibraryManagmen_Python$Reader.coverage" NAME="Reader Coverage Results" MODIFIED="1714304574961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LibraryManagmen_Python$Main.coverage" NAME="Main Coverage Results" MODIFIED="1714307168377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LibraryManagmen_Python$Library.coverage" NAME="Library Coverage Results" MODIFIED="1714321406391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LibraryManagmen_Python$Book.coverage" NAME="Book Coverage Results" MODIFIED="1714320073756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LibraryManagmen_Python$Reader.coverage" NAME="Reader Coverage Results" MODIFIED="1714321252904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LibraryManagmen_Python$Main.coverage" NAME="Main Coverage Results" MODIFIED="1714322777993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

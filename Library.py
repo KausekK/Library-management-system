@@ -1,3 +1,8 @@
+from datetime import datetime
+
+from Loan import Loan
+
+
 class Library:
     def __init__(self):
         self.books = []
@@ -50,8 +55,12 @@ class Library:
             print("No books found with that title.")
 
     def add_reader(self, reader):
-        self.readers.append(reader)
-        print("Added new reader to the library.")
+        existing_reader = self.find_reader_by_id(reader.reader_id)
+        if existing_reader is None:
+            self.readers.append(reader)
+            print("Added new reader to the library.")
+        else:
+            print(f"Reader with ID {reader.reader_id} already exists and cannot be added.")
 
     def find_reader_by_id(self, reader_id):
         for reader in self.readers:
@@ -95,8 +104,29 @@ class Library:
         reader = next((r for r in self.readers if r.reader_id == reader_id), None)
         book = next((b for b in self.books if b.isbn == book_isbn), None)
         if reader and book:
-            reader.record_activity(book, "Returned")
-            reader.return_book(book)
+            if book.is_borrowed:
+                loan_record = next((item for item in reader.activity_history if
+                                    item.get('book') == book.title and item.get('type') == 'Borrowed' and item.get(
+                                        'date') and
+                                    'return_date' not in item), None)
+
+                if loan_record:
+                    loan = loan_record.get('loan', None)
+                    if not loan:
+                        loan = Loan(book, reader)
+                        loan.loan_date = loan_record['date']
+
+                    loan.return_date = datetime.now()
+                    fee = loan.calculate_fee()
+                    loan_record['return_date'] = loan.return_date
+
+                    reader.record_activity(book, "Returned", fee)
+                    book.is_borrowed = False
+                    print(f"{book.title} has been returned by {reader.first_name} {reader.last_name}. Fee: {fee:.2f}")
+                else:
+                    print(f"Could not find loan record for {book.title}.")
+            else:
+                print(f"This book was not borrowed by this reader or it has already been returned.")
         else:
             print("Book or reader not found.")
 
@@ -124,15 +154,21 @@ class Library:
         reader = next((r for r in self.readers if r.reader_id == reader_id), None)
         if book and reader:
             book.release_reservation()
+            reader.record_activity(book,"Reservation Cancelled")
         else:
             print("No reservation found for cancellation or reader not found.")
 
     def check_reservations_expiry(self):
+        has_reserved_books = False
         for book in self.books:
             if book.is_reserved:
-                book.check_reservation_expiry()
+                has_reserved_books = True
+                reservation_expiry = book.reservation_expiry.strftime('%Y-%m-%d %H:%M')
+                if book.reservation_expiry < datetime.now():
+                    book.check_reservation_expiry()
+                    print(f"Reservation for '{book.title}' has expired and has been cancelled.")
+                else:
+                    print(f"Reservation for '{book.title}' is still active, expires on {reservation_expiry}.")
+        if not has_reserved_books:
+            print("There are no reserved books to check.")
 
-    def display_activity_history(self):
-        print(f"Activity History for {self.first_name} {self.last_name}:")
-        for loan in self.borrowing_history:
-            print(loan)

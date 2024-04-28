@@ -2,29 +2,29 @@ from Book import Book
 from Library import Library
 from Reader import Reader
 
+
 def main():
     library = Library()
 
-    library.add_book(Book("1984", "George Orwell", 328, "978-0451524935"))
-    library.add_book(Book("To Kill a Mockingbird", "Harper Lee", 281, "978-0446310789"))
-    library.add_book(Book("The Great Gatsby", "F. Scott Fitzgerald", 180, "978-0743273565"))
-    library.add_book(Book("Pride and Prejudice", "Jane Austen", 432, "978-1503290563"))
-    library.add_book(Book("Brave New World", "Aldous Huxley", 288, "978-0060850524"))
+    library.add_book(Book("1984", "George Orwell", 328, "9780451524935"))
+    library.add_book(Book("To Kill a Mockingbird", "Harper Lee", 281, "9780446310789"))
+    library.add_book(Book("The Great Gatsby", "F. Scott Fitzgerald", 180, "9780743273565"))
+    library.add_book(Book("Pride and Prejudice", "Jane Austen", 432, "9781503290563"))
+    library.add_book(Book("Brave New World", "Aldous Huxley", 288, "9780060850524"))
 
     library.add_reader(Reader(1, "John", "Doe", "123 Main St", "555-1234"))
     library.add_reader(Reader(2, "Jane", "Doe", "124 Main St", "555-5678"))
 
     library.add_reservation(1, "1984", "George Orwell")
     library.add_reservation(2, "To Kill a Mockingbird", "Harper Lee")
-    library.borrow_book(1, "978-0743273565")
-
-
+    library.borrow_book(1, "9780743273565")
 
     while True:
         print("\nAvailable commands:")
         print("ADD BOOK - Add a new book to the library")
         print("EDIT BOOK - Edit a book's details")
         print("REMOVE BOOK - Remove a book from the library")
+        print("FIND BOOK - Find a book by title from the library")
         print("ADD READER - Add a new reader to the library")
         print("REMOVE READER - Remove a reader from the library")
         print("EDIT READER - Edit a reader's details")
@@ -55,6 +55,7 @@ def main():
             pages = input("Enter new number of pages (or leave blank for no change): ")
             pages = int(pages) if pages else None
             library.edit_book(isbn, title, author, pages)
+
         elif command == "REMOVE BOOK":
             isbn = input("Enter ISBN of the book to remove: ")
             library.remove_book(isbn)
@@ -66,6 +67,10 @@ def main():
             address = input("Enter address: ")
             phone_number = input("Enter phone number: ")
             library.add_reader(Reader(reader_id, first_name, last_name, address, phone_number))
+
+        elif command == "FIND BOOK":
+            title = input("Enter title: ")
+            library.find_book_by_title(title)
 
         elif command == "EDIT READER":
             reader_id = int(input("Enter reader ID: "))
