@@ -31,6 +31,16 @@ class Library:
         else:
             print("No books available in the library.")
 
+    def display_borrowed_books(self):
+        counter = 0
+        print("Library Borrowed Books:")
+        for book in self.books:
+            if book.is_borrowed:
+                counter += 1
+                print(book)
+        if counter == 0:
+            print("No books currently borrowed.")
+
     def find_book_by_title(self, title):
         found_books = [book for book in self.books if book.title == title]
         if found_books:
@@ -43,6 +53,12 @@ class Library:
         self.readers.append(reader)
         print("Added new reader to the library.")
 
+    def find_reader_by_id(self, reader_id):
+        for reader in self.readers:
+            if reader.reader_id == reader_id:
+                return reader
+        return None
+
     def remove_reader(self, reader_id):
         reader_to_remove = next((reader for reader in self.readers if reader.reader_id == reader_id), None)
         if reader_to_remove:
@@ -54,23 +70,32 @@ class Library:
     def edit_reader(self, reader_id, first_name=None, last_name=None, address=None, phone_number=None):
         reader_to_edit = next((reader for reader in self.readers if reader.reader_id == reader_id), None)
         if reader_to_edit:
-            reader_to_edit.update_reader_details(first_name=first_name, last_name=last_name, address=address, phone_number=phone_number)
+            reader_to_edit.update_reader_details(first_name=first_name, last_name=last_name, address=address,
+                                                 phone_number=phone_number)
             print(f"Updated reader details: {reader_to_edit}")
         else:
             print("Reader not found.")
 
-    def borrow_book(self, reader_id, book_isbn):
+    def borrow_book(self, reader_id, isbn):
         reader = next((r for r in self.readers if r.reader_id == reader_id), None)
-        book = next((b for b in self.books if b.isbn == book_isbn and not b.is_borrowed), None)
-        if reader and book:
-            reader.borrow_book(book)
+        book = next((b for b in self.books if b.isbn == isbn), None)
+        if book and reader:
+            if not book.is_borrowed and not book.is_reserved:
+                book.is_borrowed = True
+                reader.record_activity(book, "Borrowed")
+                print(f"Book {book.title} has been borrowed by {reader.first_name} {reader.last_name}.")
+            elif book.is_reserved:
+                print(f"Book {book.title} is currently reserved and cannot be borrowed.")
+            else:
+                print(f"Book {book.title} is already borrowed.")
         else:
-            print("Book is not available for borrowing or reader not found.")
+            print("Book or reader not found.")
 
     def return_book(self, reader_id, book_isbn):
         reader = next((r for r in self.readers if r.reader_id == reader_id), None)
         book = next((b for b in self.books if b.isbn == book_isbn), None)
         if reader and book:
+            reader.record_activity(book, "Returned")
             reader.return_book(book)
         else:
             print("Book or reader not found.")
@@ -82,3 +107,32 @@ class Library:
                 print(reader)
         else:
             print("No readers registered in the library.")
+
+    def add_reservation(self, reader_id, title, author):
+        reader = next((r for r in self.readers if r.reader_id == reader_id), None)
+        book = next((b for b in self.books if b.title == title and b.author == author), None)
+        if book and reader:
+            if not book.is_borrowed and not book.is_reserved:
+                reader.reserve_book(book)
+            else:
+                print(f"Book {title} by {author} is already borrowed or reserved.")
+        else:
+            print("Book or reader not found.")
+
+    def cancel_reservation(self, reader_id, title, author):
+        book = next((b for b in self.books if b.title == title and b.author == author and b.is_reserved), None)
+        reader = next((r for r in self.readers if r.reader_id == reader_id), None)
+        if book and reader:
+            book.release_reservation()
+        else:
+            print("No reservation found for cancellation or reader not found.")
+
+    def check_reservations_expiry(self):
+        for book in self.books:
+            if book.is_reserved:
+                book.check_reservation_expiry()
+
+    def display_activity_history(self):
+        print(f"Activity History for {self.first_name} {self.last_name}:")
+        for loan in self.borrowing_history:
+            print(loan)

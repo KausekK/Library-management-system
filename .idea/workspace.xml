@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="254addc8-e932-4aaa-b52c-36364c5a031c" name="Changes" comment="add, edit and remove books or readers, borrowing and returning books">
-      <change afterPath="$PROJECT_DIR$/Book.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Loan.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="254addc8-e932-4aaa-b52c-36364c5a031c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book.py" beforeDir="false" afterPath="$PROJECT_DIR$/Book.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Loan.py" beforeDir="false" afterPath="$PROJECT_DIR$/Loan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reader.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,18 +27,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "KausekK"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;KausekK&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/KausekK/LibraryManagmen-Python.git",
-    "accountId": "7d07b850-d253-44bd-b996-1e565ac7cd9b"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/KausekK/LibraryManagmen-Python.git&quot;,
+    &quot;accountId&quot;: &quot;7d07b850-d253-44bd-b996-1e565ac7cd9b&quot;
   }
-}]]></component>
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -51,6 +53,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.Book.executor": "Run",
+    "Python.Library.executor": "Debug",
     "Python.Main.executor": "Run",
     "Python.Reader.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -80,7 +84,9 @@
       <option name="presentableId" value="Default" />
       <updated>1714247008404</updated>
       <workItem from="1714247008407" duration="235000" />
-      <workItem from="1714247258750" duration="4572000" />
+      <workItem from="1714247258750" duration="5224000" />
+      <workItem from="1714296023943" duration="7979000" />
+      <workItem from="1714304373425" duration="2903000" />
     </task>
     <task id="LOCAL-00001" summary="add, edit and remove books or readers, borrowing and returning books">
       <option name="closed" value="true" />
@@ -90,18 +96,39 @@
       <option name="project" value="LOCAL" />
       <updated>1714251873324</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add, edit and remove books or readers, borrowing and returning books">
+      <option name="closed" value="true" />
+      <created>1714251906113</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714251906113</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add, edit and remove books or readers, borrowing and returning books" />
     <option name="LAST_COMMIT_MESSAGE" value="add, edit and remove books or readers, borrowing and returning books" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/LibraryManagmen_Python$Reader.coverage" NAME="Reader Coverage Results" MODIFIED="1714251174913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LibraryManagmen_Python$Main.coverage" NAME="Main Coverage Results" MODIFIED="1714251195655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LibraryManagmen_Python$Library.coverage" NAME="Library Coverage Results" MODIFIED="1714305319530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LibraryManagmen_Python$Book.coverage" NAME="Book Coverage Results" MODIFIED="1714305713335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LibraryManagmen_Python$Reader.coverage" NAME="Reader Coverage Results" MODIFIED="1714304574961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LibraryManagmen_Python$Main.coverage" NAME="Main Coverage Results" MODIFIED="1714307168377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
