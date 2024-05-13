@@ -15,16 +15,9 @@ class Loan:
     def calculate_fee(self):
         if not self.return_date:
             return 0
-        late_days = max(0, (self.return_date - self.loan_date).days - 14)
-        return self.base_fee + late_days * self.daily_late_fee
-
-    ## funkcja pomocnicza zeby sprawdzic czy opłata za spóźnione oddanie książki działa
-    # def calculate_fee(self):
-    #     if not self.return_date:
-    #         return 0
-    #     total_seconds_late = (self.return_date - self.loan_date).total_seconds() - 5
-    #     periods_late = max(0, int(total_seconds_late // 5))
-    #     return self.base_fee + periods_late * self.daily_late_fee
+        total_seconds_late = (self.return_date - self.loan_date).total_seconds() - 5
+        periods_late = max(0, int(total_seconds_late // 5))
+        return self.base_fee + periods_late * self.daily_late_fee
 
     def __str__(self):
         return_date_str = self.return_date.strftime('%Y-%m-%d') if self.return_date else "Not returned"

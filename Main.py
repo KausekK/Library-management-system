@@ -11,6 +11,16 @@ def main():
     library.add_book(Book("The Great Gatsby", "F. Scott Fitzgerald", 180, "9780743273565"))
     library.add_book(Book("Pride and Prejudice", "Jane Austen", 432, "9781503290563"))
     library.add_book(Book("Brave New World", "Aldous Huxley", 288, "9780060850524"))
+    library.add_book(Book("Moby Dick", "Herman Melville", 720, "9781503280786"))
+    library.add_book(Book("War and Peace", "Leo Tolstoy", 1225, "9781420951083"))
+    library.add_book(Book("Crime and Punishment", "Fyodor Dostoevsky", 671, "9780486415871"))
+    library.add_book(Book("The Catcher in the Rye", "J.D. Salinger", 277, "9780316769488"))
+    library.add_book(Book("The Hobbit", "J.R.R. Tolkien", 310, "9780345339683"))
+    library.add_book(Book("The Lord of the Rings", "J.R.R. Tolkien", 1178, "9780544003415"))
+    library.add_book(Book("The Brothers Karamazov", "Fyodor Dostoevsky", 796, "9780374528379"))
+    library.add_book(Book("Ulysses", "James Joyce", 730, "9781840226355"))
+    library.add_book(Book("One Hundred Years of Solitude", "Gabriel Garcia Marquez", 417, "9780060883287"))
+    library.add_book(Book("The Divine Comedy", "Dante Alighieri", 798, "9780142437223"))
 
     library.add_reader(Reader(1, "John", "Doe", "123 Main St", "555-1234"))
     library.add_reader(Reader(2, "Jane", "Doe", "124 Main St", "555-5678"))
@@ -74,10 +84,10 @@ def main():
 
         elif command == "EDIT READER":
             reader_id = int(input("Enter reader ID: "))
-            first_name = input("Enter new first name (or leave blank for no change): ")
-            last_name = input("Enter new last name (or leave blank for no change): ")
-            address = input("Enter new address (or leave blank for no change): ")
-            phone_number = input("Enter new phone number (or leave blank for no change): ")
+            first_name = input("Enter new first name: ")
+            last_name = input("Enter new last name: ")
+            address = input("Enter new address: ")
+            phone_number = input("Enter new phone number: ")
             library.edit_reader(reader_id, first_name, last_name, address, phone_number)
 
         elif command == "REMOVE READER":
